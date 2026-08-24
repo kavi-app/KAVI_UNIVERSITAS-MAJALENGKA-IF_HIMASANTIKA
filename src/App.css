@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --background: white;
+  --line: #D5D5D8;
+  --text: black;
+  --text-sec: white;
+  --text-sec-2: rgb(141, 141, 141);
+  --shadow: 0px 0px 40px 1px rgba(255, 10, 194, 0.274);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.grad-circle {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background-image: radial-gradient(var(--grad-cr, transparent), transparent, transparent);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.work-title {
+  width: 100%;
+  position: sticky;
+  bottom: 1rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.work-title::before {
+  content: "Team";
+  position: absolute;
+  font-size: 2rem;
+  bottom: 1rem;
+  margin-left: -5rem;
+}
+
+.work-item::before {
+  content: "AWS";
+  position: absolute;
+  margin-top: -3rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  background-color: rgba(255, 255, 255, 0.048);
+  z-index: 10;
+  inset: 0;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid var(--line);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--slide-duration) linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.from-top {
+  animation: from-top 0.5s ease-in-out;
+  animation-delay: var(--delay, 0s);
+  animation-fill-mode: backwards;
+}
+
+.from-bottom {
+  animation: from-bottom 0.5s ease-in-out;
+  animation-delay: var(--delay, 0s);
+  animation-fill-mode: backwards;
+}
+
+.from-left {
+  animation: from-left 0.5s ease-in-out;
+  animation-delay: var(--delay, 0s);
+  animation-fill-mode: backwards;
+}
+
+@keyframes from-top {
+  0% {transform: translateY(-1rem); opacity: 0;}
+  100% {transform: translateY(0rem); opacity: 1;}
+}
+
+@keyframes from-bottom {
+  0% {transform: translateY(1rem); opacity: 0;}
+  100% {transform: translateY(0rem); opacity: 1;}
+}
+
+@keyframes from-left {
+  0% {transform: translateX(1rem); opacity: 0;}
+  100% {transform: translateX(0rem); opacity: 1;}
+}
