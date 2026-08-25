@@ -1,40 +1,28 @@
-import fikar from '../assets/images/people/5.png'
-import septian from '../assets/images/people/1.png'
-import ina from '../assets/images/people/2.png'
-import putra from '../assets/images/people/3.png'
-import roni from '../assets/images/people/4.png'
-import dimas from '../assets/images/people/6.jpeg'
-import { useDevice } from '../hooks/useDevice'
 
-export default function Section2() {
+import { useDeviceType } from '../../hooks/useDeviceType'
 
-    const device = useDevice()
+export default function PeopleInformationSection({data}) {
 
-    const data = [
-        {name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar},
-        {name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian},
-        {name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni},
-        {name: "Ina Dina", role: "Anggota", ig: "@andkjsnd", img: ina},
-        {name: "Dimas Candra Febrianto", role: "Anggota", ig: "@andkjsnd", img: dimas},
-        {name: "Moch Noordin Saputra", role: "Anggota", ig: "@andkjsnd", img: putra},
-    ]
+    const {isMobile, isDesktop} = useDeviceType()
 
     return (
         <section className="border-b border-(--line) pb-20!">
-            {device === 'mobile' ? (
+            {isMobile && (
                 <div className={`grid-cols grid px-10! my-20!`}>
                     <h1>The Minds Behind the Work.</h1>
                     <h2 className="p-5! text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
                 </div>
-            ) : (
+            )}
+            
+            {isDesktop && (
                 <div className={`grid-cols-2 grid px-10! my-20!`}>
                     <h1>The Minds Behind the Work.</h1>
                     <h2 className="p-5! text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
                 </div>
             )}
-          <div className={`${device === 'mobile' ? 'grid-cols' : 'grid-cols-2'} w-full grid`}>
+          <div className={`${isMobile ? 'grid-cols' : 'grid-cols-2'} w-full grid`}>
             {data.map((item, index) => {
-                if(device === 'mobile'){
+                if(isMobile){
                     return (
                         <div key={index} className='w-full p-2!'>
                             <div className='w-full flex justify-center'>
