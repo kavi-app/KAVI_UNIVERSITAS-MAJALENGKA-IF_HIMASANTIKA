@@ -23,12 +23,16 @@ export default function Section2() {
         <section className="border-b border-(--line) pb-20!">
             {device === 'mobile' ? (
                 <div className={`grid-cols grid px-10! my-20!`}>
-                    <h1>The Minds Behind the Work.</h1>
+                    <h1>FASILITAS AKADEMIK.</h1>
                     <h2 className="p-5! text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
                 </div>
             ) : (
                 <div className={`grid-cols-2 grid px-10! my-20!`}>
-                    <h1>The Minds Behind the Work.</h1>
+                    <div >
+                    <h2 className="font-bold text-4xl">FASILITAS AKADEMIK.</h2>
+
+                    <p>Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :</p>
+                    </div>
                     <h2 className="p-5! text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
                 </div>
             )}

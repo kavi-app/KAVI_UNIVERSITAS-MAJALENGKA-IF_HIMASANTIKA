@@ -10,6 +10,8 @@ import { Triangle } from './components/Line';
 import ClientSection from './components/ClientSection';
 import ImgSection from './components/ImgSection';
 import { useDevice } from './hooks/useDevice';
+import logo from './assets/logo/UMC-1.webp'
+import { cn } from './utils/tw';
 
 function App() {
 
@@ -47,19 +49,22 @@ function App() {
       >
         <main ref={mainRef}>
           <section className='flex justify-center h-screen border-(--line) border-b'>
-            <nav></nav>
+            <nav>
+              <img src={logo} alt="Logo" className="h-full" />
+            </nav>
             <div className='w-[80%] h-screen border-(--line) border-l border-r flex justify-center items-center'>
               <div>
                 <div className="relative text-(--text)">
                   <div className='grad-circle [--grad-cr:rgba(255,0,132,0.3)]'></div>
                   <div className='flex'>
-                    <p className="text-7xl lg:text-9xl from-top">KAVI.</p>
-                    <p className="text-7xl lg:text-9xl from-left [--delay:300ms]">APP</p>
+                    <p className="text-7xl lg:text-9xl from-top">IF.</p>
+                    <p className="text-7xl lg:text-9xl from-left [--delay:300ms]">UMC</p>
                   </div>
-                  <div className="text-md px-2! flex justify-between lg:text-lg from-bottom [--delay:600ms]">
-                    <p>Experiment</p>
-                    <p>Experience</p>
-                    <p>Expert</p>
+                  <div className="text-sm px-2! flex justify-between lg:text-sm from-bottom [--delay:600ms]">
+                    <p>INFORMATIKA</p>
+                    <p>UNIVERSITAS</p>
+                    <p>MUHAMMADIYAH</p>
+                    <p>CIREBON</p>
                   </div>
                 </div>
                 <div className="flex justify-center items-center mt-15! from-top [--delay:1s]">
@@ -69,14 +74,25 @@ function App() {
             </div>
           </section>
 
+          <ImgSection/>
+
           <section ref={section1} className='relative w-full h-screen flex justify-center items-center'>
             <Triangle style={"absolute rotate-180 left-1/2 top-0"}/>
             {open && (
               <div className='text-center'>
-                <p className={`${device === 'mobile' ? 'text-xl' : 'text-4xl'} text-(--text-sec-2) from-bottom`}>anjay keren banget bos</p>
-                <p className={`${device === 'mobile' ? 'text-4xl' : 'text-8xl'} font-bold from-bottom [--delay:500ms]`}>Building Ideas Into <mark className='text-pink-500 bg-transparent'>Reality.</mark></p>
+                <p className={cn(
+                  "font-bold from-bottom [--delay:500ms]",
+                  device === 'mobile' ? 
+                    'text-4xl' : 
+                    'text-8xl'
+                  )
+                }>
+                  VISI & 
+                   <mark className='text-pink-500 bg-transparent'> MISI</mark></p>
+                <p className={cn(device === 'mobile' ? 'text-4xl' : 'text-8xl', "font-bold from-bottom")}></p>
+                <p className={cn(device === 'mobile' ? 'text-medium' : 'text-medium', "text-(--text-sec-2) from-bottom")}>Universitas Muhammadiyah Cirebon</p>
                 <div className='flex justify-center mt-10! from-bottom [--delay:1s]'>
-                  <p className={`${device === 'mobile' ? 'text-md' : 'text-2xl'} w-[50%]`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus voluptate nihil officiis id ipsam eius dignissimos excepturi numquam.</p>
+                  <p className={cn(device === 'mobile' ? 'text-md' : 'text-2xl', "w-[50%]")}>“Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024”</p>
                 </div>
               </div>
             )}
@@ -85,8 +101,6 @@ function App() {
           <Section sectionRef={sectionRef} angle={angle} />
 
           <Section2/>
-
-          <ImgSection/>
 
           <ProjectSection/>
 

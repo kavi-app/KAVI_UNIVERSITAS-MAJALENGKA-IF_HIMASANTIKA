@@ -6,13 +6,13 @@ import { useDevice } from '../hooks/useDevice';
 export default function ImgSection() {
 
     const data = [
-        {name: "ASADAD", image: img1},
-        {name: "ASADAD", image: img2},
+        {name: "TENTANG", image: img1, desc: "Program Studi S1 Teknik Informatika Universitas Muhammadiyah Cirebon (UMC) adalah institusi pendidikan tinggi yang berdedikasi untuk mencetak lulusan unggul, inovatif, dan berakhlak mulia di bidang teknologi informasi. Kami membekali mahasiswa dengan keahlian praktis dan teoretis yang relevan dengan kebutuhan industri digital masa kini.."},
+        {name: "ASADAD", image: img2, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."},
     ]
     const [ts, setTs] = useState(false)
     const device = useDevice()
 
-    function Image({name, img}) {
+    function Image({name, img, desc}) {
         const sectionRef = useRef(null)
         const [scroll, setScroll] = useState(1);
 
@@ -51,17 +51,17 @@ export default function ImgSection() {
                                 <div className='w-full h-full rounded-md bg-white'></div>
                             </div>
                             <div className='flex justify-end mt-2!'>
-                                <p className='text-xs w-70 text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque aliquid ab unde tenetur fugiat expedita mollitia inventore sint libero vero iusto earum eius, ipsa voluptates quisquam. Perferendis, quis dolores.</p>
+                                <p className='text-xs w-70 text-white'>{desc}</p>
                             </div>
                         </div>
                     ) : (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <div className='text-2xl text-white mb-2!'>{name}</div>
-                            <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
+                            {/* <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
                                 <div className='w-full h-full rounded-md bg-white'></div>
-                            </div>
+                            </div> */}
                             <div className='flex justify-end mt-2!'>
-                                <p className='w-100 text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque aliquid ab unde tenetur fugiat expedita mollitia inventore sint libero vero iusto earum eius, ipsa voluptates quisquam. Perferendis, quis dolores.</p>
+                                <p className='w-100 text-white'>{desc}</p>
                             </div>
                         </div>
                     )}
@@ -74,7 +74,7 @@ export default function ImgSection() {
         <>
             <section className='bg-black'>
                 {data.map((item, index) => (
-                    <Image key={index} name={item.name} img={item.image}/>
+                    <Image key={index} name={item.name} img={item.image} desc={item.desc}/>
                 ))}
                 <p className='work-title'>Work</p>
             </section>
