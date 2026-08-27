@@ -31,9 +31,10 @@ export default function Section2() {
                     <div >
                     <h2 className="font-bold text-4xl">FASILITAS AKADEMIK.</h2>
 
-                    <p>Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :</p>
+                    <p className="text-ms">
+                        Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :
+                    </p>
                     </div>
-                    <h2 className="p-5! text-3xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
                 </div>
             )}
           <div className={`${device === 'mobile' ? 'grid-cols' : 'grid-cols-2'} w-full grid`}>

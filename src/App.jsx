@@ -46,13 +46,71 @@ function App() {
           smoothWheel: true,
           wheelMultiplier: 0.5,
         }}
-      >
-        <main ref={mainRef}>
-          <section className='flex justify-center h-screen border-(--line) border-b'>
-            <nav>
-              <img src={logo} alt="Logo" className="h-full" />
+        >
+
+      <main ref={mainRef}>
+        <header className="relative h-screen border-b border-(--line)">
+        
+        <nav className="absolute top-0 left-0 w-full flex justify-between items-center justfy-between px-10 py-5">
+
+            {/*Logo*/}         
+              <div className="flex items-center">
+              <img src={logo} alt="Logo" className="h-12 w-auto" />
+              </div>
+
+            {/*Menu*/}
+              <div className='hidden items-center gap-8 md:flex'>
+              <a
+                href="#home"
+                className="font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                Home
+              </a>
+
+              <a
+                href="#Tentang"
+                className="font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                Tentang
+              </a>
+
+              <a
+                href="#visi-misi"
+                className="font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                Visi-Misi
+              </a>
+
+              <a
+                href="#fasilitas"
+                className="font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                Fasilitas
+              </a>
+
+              <a
+                href="#kegiatan"
+                className="font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                Kegiatan
+              </a>
+            </div>
+
+            {/* Tombol daftar */}
+            <div>
+            <a
+              href="#daftar"
+              className="ml-4 rounded-lg bg-red-700 px-5 py-2 text-white transition hover:bg-blue-700"
+            >
+              Daftar sekarang
+            </a>
+              </div>
             </nav>
-            <div className='w-[80%] h-screen border-(--line) border-l border-r flex justify-center items-center'>
+          </header>
+
+
+          <section> 
+          <div className='w-[80%] h-screen border-(--line) border-l border-r flex justify-center items-center'>
               <div>
                 <div className="relative text-(--text)">
                   <div className='grad-circle [--grad-cr:rgba(255,0,132,0.3)]'></div>
@@ -88,11 +146,12 @@ function App() {
                   )
                 }>
                   VISI & 
-                   <mark className='text-pink-500 bg-transparent'> MISI</mark></p>
+                <mark className='text-pink-500 bg-transparent'> MISI</mark></p>
                 <p className={cn(device === 'mobile' ? 'text-4xl' : 'text-8xl', "font-bold from-bottom")}></p>
-                <p className={cn(device === 'mobile' ? 'text-medium' : 'text-medium', "text-(--text-sec-2) from-bottom")}>Universitas Muhammadiyah Cirebon</p>
+                <p className={cn(device === 'mobile' ? 'text-sm' : 'text-sm', "text-(--text-sec-2) from-bottom")}>Program Studi S1 Teknik Informatika</p>
                 <div className='flex justify-center mt-10! from-bottom [--delay:1s]'>
-                  <p className={cn(device === 'mobile' ? 'text-md' : 'text-2xl', "w-[50%]")}>“Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024”</p>
+                <p className={cn(device === 'mobile' ? 'text-2xl' : 'text-4xl', "font-bold")}>VISI</p>
+                <p className={cn(device === 'mobile' ? 'text-md' : 'text-2xl', "w-[50%]")}>“Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024”</p>
                 </div>
               </div>
             )}
@@ -111,7 +170,7 @@ function App() {
           <footer className='w-full bg-black h-100 text-white'>
             <p>World in hand</p>
           </footer>
-        </main>
+      </main>
       </ReactLenis>
     </>
   )
