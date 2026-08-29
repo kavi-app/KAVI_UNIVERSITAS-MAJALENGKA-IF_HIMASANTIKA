@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import img1 from '../assets/images/1.jpg';
-import img2 from '../assets/images/2.jpg';
-import { useDevice } from '../hooks/useDevice';
+import { useDeviceType } from '../../hooks/useDeviceType';
 
-export default function ImgSection() {
+export default function ImgSection({data}) {
 
-    const data = [
-        {name: "ASADAD", image: img1},
-        {name: "ASADAD", image: img2},
-    ]
     const [ts, setTs] = useState(false)
-    const device = useDevice()
+    const { isMobile, isDesktop } = useDeviceType()
 
-    function Image({name, img}) {
+    function Image({name, img, desc,}) {
         const sectionRef = useRef(null)
         const [scroll, setScroll] = useState(1);
 
@@ -38,33 +32,37 @@ export default function ImgSection() {
         }, []);
 
         return (
-            <div ref={sectionRef} className={`w-full ${device === 'mobile' ? 'h-[70vh]' : 'h-screen'}`}>
-                <div className={`relative w-full ${device === 'mobile' ? 'h-full' : 'h-screen'} overflow-hidden`}>
-                    <img src={img} className={`absolute w-full -translate-y-1/2 ${device === 'mobile' ? 'h-screen' : 'h-[200vh]'} ${ts ? 'opacity-50' : 'opacity-100'}`} alt="test" style={{
+            <div ref={sectionRef} className={`w-full ${ isMobile ? 'h-[70vh]' : 'h-screen'}`}>
+                <div className={`relative w-full ${isMobile ? 'h-full' : 'h-screen'} overflow-hidden`}>
+                    <img src={img} className={`absolute w-full -translate-y-1/2 ${isMobile ? 'h-screen' : 'h-[200vh]'} ${ts ? 'opacity-50' : 'opacity-100'}`} alt="test" style={{
                         transform: `translateY(${scroll / 3}px)`
                     }} />
                     <div className='absolute left-1/2 -translate-x-1/2 w-[50%] h-screen border-x border-(--line)'></div>
-                    {device === 'mobile' ? (
+                    
+                    {isMobile && (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <div className='text-xl text-white mb-2!'>{name}</div>
-                            <div className='h-60 w-70 p-2! rounded-lg border border-(--line)'>
+                            {/* <div className='h-60 w-70 p-2! rounded-lg border border-(--line)'>
                                 <div className='w-full h-full rounded-md bg-white'></div>
-                            </div>
+                            </div> */}
                             <div className='flex justify-end mt-2!'>
-                                <p className='text-xs w-70 text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque aliquid ab unde tenetur fugiat expedita mollitia inventore sint libero vero iusto earum eius, ipsa voluptates quisquam. Perferendis, quis dolores.</p>
-                            </div>
-                        </div>
-                    ) : (
-                        <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                            <div className='text-2xl text-white mb-2!'>{name}</div>
-                            <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
-                                <div className='w-full h-full rounded-md bg-white'></div>
-                            </div>
-                            <div className='flex justify-end mt-2!'>
-                                <p className='w-100 text-white'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque aliquid ab unde tenetur fugiat expedita mollitia inventore sint libero vero iusto earum eius, ipsa voluptates quisquam. Perferendis, quis dolores.</p>
+                                <p className='text-xs w-70 text-white'>{desc}</p>
                             </div>
                         </div>
                     )}
+
+                    {isDesktop && (
+                        <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                            <div className='text-2xl text-white mb-2!'>{name}</div>
+                            {/* <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
+                                <div className='w-full h-full rounded-md bg-white'></div>
+                            </div> */}
+                            <div className='flex justify-end mt-2!'>
+                                <p className='w-100 text-white'>{desc}</p>
+                            </div>
+                        </div>
+                    )}
+
                 </div>
             </div>
         )
@@ -74,9 +72,9 @@ export default function ImgSection() {
         <>
             <section className='bg-black'>
                 {data.map((item, index) => (
-                    <Image key={index} name={item.name} img={item.image}/>
+                    <Image key={index} name={item.title} img={item.image} desc={item.desc}/>
                 ))}
-                <p className='work-title'>Work</p>
+                { isDesktop && (<p className='work-title'>Work</p>)}
             </section>
         </>
     )
