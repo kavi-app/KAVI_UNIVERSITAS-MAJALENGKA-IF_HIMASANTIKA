@@ -7,12 +7,12 @@ export default function ImgSection() {
 
     const data = [
         {name: "TENTANG", image: img1, desc: "Program Studi S1 Teknik Informatika Universitas Muhammadiyah Cirebon (UMC) adalah institusi pendidikan tinggi yang berdedikasi untuk mencetak lulusan unggul, inovatif, dan berakhlak mulia di bidang teknologi informasi. Kami membekali mahasiswa dengan keahlian praktis dan teoretis yang relevan dengan kebutuhan industri digital masa kini.."},
-        {name: "ASADAD", image: img2, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."},
+        {name: "KEUNGGULAN", image: img2, desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."},
     ]
     const [ts, setTs] = useState(false)
     const device = useDevice()
 
-    function Image({name, img, desc}) {
+    function Image({name, img, desc,}) {
         const sectionRef = useRef(null)
         const [scroll, setScroll] = useState(1);
 
@@ -74,7 +74,7 @@ export default function ImgSection() {
         <>
             <section className='bg-black'>
                 {data.map((item, index) => (
-                    <Image key={index} name={item.name} img={item.image} desc={item.desc}/>
+                    <Image key={index} index={index} name={item.name} img={item.image} desc={item.desc}/>
                 ))}
                 <p className='work-title'>Work</p>
             </section>

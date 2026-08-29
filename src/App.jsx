@@ -153,7 +153,7 @@ function App() {
                 <p className={cn(device === 'mobile' ? 'text-2xl' : 'text-4xl', "font-bold")}>VISI</p>
                 <p className={cn(device === 'mobile' ? 'text-md' : 'text-2xl', "w-[50%]")}>“Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024”</p>
                 </div>
-              </div>
+              </div>  
             )}
           </section>
 
