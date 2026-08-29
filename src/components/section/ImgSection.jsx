@@ -42,9 +42,9 @@ export default function ImgSection({data}) {
                     {isMobile && (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <div className='text-xl text-white mb-2!'>{name}</div>
-                            <div className='h-60 w-70 p-2! rounded-lg border border-(--line)'>
+                            {/* <div className='h-60 w-70 p-2! rounded-lg border border-(--line)'>
                                 <div className='w-full h-full rounded-md bg-white'></div>
-                            </div>
+                            </div> */}
                             <div className='flex justify-end mt-2!'>
                                 <p className='text-xs w-70 text-white'>{desc}</p>
                             </div>
@@ -72,7 +72,7 @@ export default function ImgSection({data}) {
         <>
             <section className='bg-black'>
                 {data.map((item, index) => (
-                    <Image key={index} name={item.name} img={item.image}/>
+                    <Image key={index} name={item.title} img={item.image} desc={item.desc}/>
                 ))}
                 { isDesktop && (<p className='work-title'>Work</p>)}
             </section>

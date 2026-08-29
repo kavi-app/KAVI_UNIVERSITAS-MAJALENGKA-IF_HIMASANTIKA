@@ -10,27 +10,31 @@ import img2 from '../assets/images/2.jpg';
 
 export const data = {
     first_section: {
-        title1: "KAVI.",
-        title2: "APP",
+        title1: "IF.",
+        title2: "UMC",
         desc: [
-            "Experiment", 
-            "Experience", 
-            "Expert.", 
+            "INFORMATIKA", 
+            "UNIVERSITAS", 
+            "MUHAMMADIYAH", 
+            "CIREBON", 
         ]
     },
     second_section: {
-        title: "Anjay keren bos",
-        main_title: "Bulding Ideas Into ",
-        marking_main_title: "Reality",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus voluptate nihil officiis id ipsam eius dignissimos excepturi numquam."
+        title: "Program Studi S1 Teknik Informatika",
+        main_title: "VISI &",
+        marking_main_title: "MISI",
+        desc: "Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024."
     },
-    circle_information_section: [
-        {title: "A", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
-        {title: "B", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
-        {title: "C", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
-        {title: "D", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
-        {title: "E", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
-    ],
+    circle_information_section: {
+        title: "MISI",
+        list: [
+            {title: "V", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
+            {title: "IV", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
+            {title: "III", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
+            {title: "II", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
+            {title: "I", value: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!"},
+        ]
+    },
     people_information_section: [
         {name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar},
         {name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian},

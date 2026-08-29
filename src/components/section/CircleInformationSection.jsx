@@ -26,8 +26,8 @@ export default function CircleInformationSection({data}){
 
     const [activeCircle, setActiveCircle] = useState("A");
     useEffect(() => {
-        const circle = data.find((circle, index) => {
-            const itemAngle = (360 / data.length) * index;
+        const circle = data.list.find((circle, index) => {
+            const itemAngle = (360 / data.list.length) * index;
             const rotate = ((-itemAngle - angle) % 360 + 360) % 360;
             return rotate >= 60 && rotate <= 100;
         });
@@ -47,9 +47,9 @@ export default function CircleInformationSection({data}){
             <div className='w-full h-[90%] relative border-(--line) border-b'>
               <div className='flex justify-center items-center h-full'>
                 <div className='w-[80%]'>
-                  <h1>Driven by Vision, Built with Purpose.</h1>
+                  <h1>{data.title}</h1>
                   <div>
-                    {data.map((item) => {
+                    {data.list.map((item) => {
                         if(item.title == activeCircle){
                             return (<p key={item.title} className="from-bottom [--delay:0ms] text-justify">{item.value}</p>)
                         }
@@ -62,8 +62,8 @@ export default function CircleInformationSection({data}){
           <div className="w-full h-screen absolute top-0 -z-1 overflow-hidden">
             <div className="absolute top-1/2 -translate-y-1/2 -right-100 w-150 h-150 rounded-full bg-white border border-(--line)">
               <div className="absolute inset-0"style={{transform: `rotate(${angle}deg)`}}>
-                {data.map((circle, index) => {
-                  const itemAngle = (360 / data.length) * index;
+                {data.list.map((circle, index) => {
+                  const itemAngle = (360 / data.list.length) * index;
                   const rotate = ((-itemAngle - angle) % 360 + 360) % 360;
 
                   return (
@@ -88,9 +88,9 @@ export default function CircleInformationSection({data}){
             <div className='w-full h-[90%] relative border-(--line) border-b'>
               <div className='flex justify-center items-center h-full'>
                 <div className='w-[60%]'>
-                  <h1>Driven by Vision, Built with Purpose.</h1>
+                  <h1>{data.title}</h1>
                   <div>
-                    {data.map((item) => {
+                    {data.list.map((item) => {
                         if(item.title == activeCircle){
                             return (<p key={item.title} className="from-bottom [--delay:0ms] text-justify">{item.value}</p>)
                         }
@@ -104,8 +104,8 @@ export default function CircleInformationSection({data}){
           <div className="w-[50%] h-screen relative overflow-hidden">
             <div className="absolute top-50 -right-30 w-150 h-150 rounded-full bg-white border border-(--line)">
               <div className="absolute inset-0"style={{transform: `rotate(${angle}deg)`}}>
-                {data.map((circle, index) => {
-                  const itemAngle = (360 / data.length) * index;
+                {data.list.map((circle, index) => {
+                  const itemAngle = (360 / data.list.length) * index;
                   const rotate = ((-itemAngle - angle) % 360 + 360) % 360;
 
                   return (

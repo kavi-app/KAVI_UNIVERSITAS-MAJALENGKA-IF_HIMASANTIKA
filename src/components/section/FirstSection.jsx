@@ -9,11 +9,11 @@ export default function FirstSection({data}) {
                 <div className='h-screen w-[80%] border-(--line) border-l border-r flex justify-center items-center'>
                 <div>
                     <div className="relative text-(--text)">
-                    <div className='flex'>
-                        <p className="text-5xl from-top">{data.title1}</p>
-                        <p className="text-5xl from-left [--delay:300ms]">{data.title2}</p>
+                    <div className='flex justify-center'>
+                        <p className="text-8xl from-top">{data.title1}</p>
+                        <p className="text-8xl from-left [--delay:300ms]">{data.title2}</p>
                     </div>
-                    <div className="text-xs px-2! flex justify-between from-bottom [--delay:600ms]">
+                    <div className="text-[10px] px-2! flex justify-between from-bottom [--delay:600ms]">
                         {data.desc.map((item, index) => (
                             <p key={index}>{item}</p>
                         ))}
@@ -35,7 +35,7 @@ export default function FirstSection({data}) {
                             <p className="text-7xl lg:text-9xl from-top">{data.title1}</p>
                             <p className="text-7xl lg:text-9xl from-left [--delay:300ms]">{data.title2}</p>
                         </div>
-                        <div className="text-md px-2! flex justify-between lg:text-lg from-bottom [--delay:600ms]">
+                        <div className="text-sm px-2! flex justify-between from-bottom [--delay:600ms]">
                             {data.desc.map((item, index) => (
                                 <p key={index}>{item}</p>
                             ))}

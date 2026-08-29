@@ -21,19 +21,17 @@ function App() {
   return (
     <>
       <ReactLenis
-        root
-        options={{
-          duration: 2,
-          smoothWheel: true,
-          wheelMultiplier: isMobile ? 3 : 1,
-        }}
+          root
+          options={{
+            duration: 2,
+            smoothWheel: true,
+            wheelMultiplier: isMobile ? 3 : 1,
+          }}
         >
 
       <main ref={mainRef}>
-        <header className="relative h-screen border-b border-(--line)">
-        
-        <nav className="absolute top-0 left-0 w-full flex justify-between items-center justfy-between px-10 py-5">
-
+        <header className="relative border-b border-(--line)">
+          <nav className="absolute top-0 left-0 w-full flex justify-between items-center justfy-between px-10 py-5">
             {/*Logo*/}         
               <div className="flex items-center">
               <img src={logo} alt="Logo" className="h-12 w-auto" />
@@ -88,30 +86,6 @@ function App() {
               </div>
             </nav>
           </header>
-
-
-          <section> 
-          <div className='w-[80%] h-screen border-(--line) border-l border-r flex justify-center items-center'>
-              <div>
-                <div className="relative text-(--text)">
-                  <div className='grad-circle [--grad-cr:rgba(255,0,132,0.3)]'></div>
-                  <div className='flex'>
-                    <p className="text-7xl lg:text-9xl from-top">IF.</p>
-                    <p className="text-7xl lg:text-9xl from-left [--delay:300ms]">UMC</p>
-                  </div>
-                  <div className="text-sm px-2! flex justify-between lg:text-sm from-bottom [--delay:600ms]">
-                    <p>INFORMATIKA</p>
-                    <p>UNIVERSITAS</p>
-                    <p>MUHAMMADIYAH</p>
-                    <p>CIREBON</p>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center mt-15! from-top [--delay:1s]">
-                  <div className="bg-black rounded-full text-(--text-sec) py-2! px-10! text-xl font-bold">Scroll</div>
-                </div>
-              </div>
-            </div>
-          </section>
 
           <FirstSection data={data.first_section} />
 
