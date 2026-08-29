@@ -15,7 +15,7 @@ export const data = {
         desc: [
             "Experiment", 
             "Experience", 
-            "Expert", 
+            "Expert.", 
         ]
     },
     second_section: {
