@@ -6,7 +6,7 @@ export default function ImgSection({data}) {
     const [ts, setTs] = useState(false)
     const { isMobile, isDesktop } = useDeviceType()
 
-    function Image({name, img, desc}) {
+    function Image({name, img, desc,}) {
         const sectionRef = useRef(null)
         const [scroll, setScroll] = useState(1);
 
@@ -54,9 +54,9 @@ export default function ImgSection({data}) {
                     {isDesktop && (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <div className='text-2xl text-white mb-2!'>{name}</div>
-                            <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
+                            {/* <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
                                 <div className='w-full h-full rounded-md bg-white'></div>
-                            </div>
+                            </div> */}
                             <div className='flex justify-end mt-2!'>
                                 <p className='w-100 text-white'>{desc}</p>
                             </div>
@@ -72,7 +72,7 @@ export default function ImgSection({data}) {
         <>
             <section className='bg-black'>
                 {data.map((item, index) => (
-                    <Image key={index} name={item.title} img={item.image} desc={item.desc}/>
+                    <Image key={index} name={item.name} img={item.image}/>
                 ))}
                 { isDesktop && (<p className='work-title'>Work</p>)}
             </section>
