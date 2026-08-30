@@ -20,7 +20,6 @@ export default function FirstSection({data}) {
                     </div>
                     </div>
                     <div className="flex justify-center items-center mt-15! from-top [--delay:1s]">
-                        <div className="bg-black rounded-full text-(--text-sec) py-2! px-10! text-xl font-bold">Scroll</div>
                     </div>
                 </div>
                 </div>
@@ -42,7 +41,6 @@ export default function FirstSection({data}) {
                         </div>
                         </div>
                         <div className="flex justify-center items-center mt-15! from-top [--delay:1s]">
-                            <div className="bg-black rounded-full text-(--text-sec) py-2! px-10! text-xl font-bold">Scroll</div>
                         </div>
                     </div>
                 </div>

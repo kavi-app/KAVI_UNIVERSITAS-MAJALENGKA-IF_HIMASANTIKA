@@ -31,38 +31,43 @@ function App() {
       >
         <main ref={mainRef}>
           <header className="relative border-b border-(--line)">
-            <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-5">
+            <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10! py-5">
               {/* LOGO */}
               <div className="flex items-center">
                 <img src={logo} alt="Logo UMC" className="h-12 w-auto" />
+                <div className="ml-2 text-xs pl-3! text-gray-800">
+                <p>Universitas</p>
+                <p>Muhammadiyah</p>
+                <p>Cirebon</p>
+                </div>
               </div>
 
               {/* MENU */}
-              <div className="hidden items-center gap-8 md:flex">
-                <a href="#home" className="font-medium text-gray-700 transition hover:text-blue-600">
+              <div className="hidden items pl-160! gap-8 md:flex">
+                <a href="#home" className="font-medium text-gray-700 transition hover:text-red-600">
                   Home
                 </a>
 
-                <a href="#Tentang" className="font-medium text-gray-700 transition hover:text-blue-600">
+                <a href="#Tentang" className="font-medium text-gray-700 transition hover:text-red-600">
                   Tentang
                 </a>
 
-                <a href="#visi-misi" className="font-medium text-gray-700 transition hover:text-blue-600">
+                <a href="#visi-misi" className="font-medium text-gray-700 transition hover:text-red-600">
                   Visi-Misi
                 </a>
 
-                <a href="#fasilitas" className="font-medium text-gray-700 transition hover:text-blue-600">
+                <a href="#fasilitas" className="font-medium text-gray-700 transition hover:text-red-600">
                   Fasilitas
                 </a>
 
-                <a href="#kegiatan" className="font-medium text-gray-700 transition hover:text-blue-600">
+                <a href="#kegiatan" className="font-medium text-gray-700 transition hover:text-red-600">
                   Kegiatan
                 </a>
               </div>
 
               {/* TOMBOL DAFTAR */}
               <div>
-                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5 py-2 text-white transition hover:bg-blue-700">
+                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-blue-700">
                   Daftar sekarang
                 </a>
               </div>
