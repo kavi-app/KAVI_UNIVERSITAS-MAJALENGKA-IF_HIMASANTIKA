@@ -2,6 +2,7 @@
 import { useRef } from "react"
 import { useSectionProgress } from "../../hooks/useSectionProgress"
 import { useDeviceType } from "../../hooks/useDeviceType"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export default function ClientSection({data}) {
 
@@ -45,6 +46,22 @@ export default function ClientSection({data}) {
                             <div>
                                 <h1>Class</h1>
                                 <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis itaque ratione nam! Iusto ea hic fuga earum dolor vel doloremque quas, ad, labore aliquam suscipit ipsum! Eligendi nisi et incidunt!</p>
+                            </div>
+                        </div>
+                        <div className="h-full flex items-center">
+                            <div>
+                                <h1>Ayo Daftar sekarang!</h1>
+                                <div className="flex justify-center items-center gap-3">
+                                    <div className="flex items-center anim-float-left">
+                                        <ChevronRight/>
+                                        <ChevronRight size={20}/>
+                                    </div>
+                                    <h2 className="font-bold text-xl">TEST</h2>
+                                    <div className="flex items-center anim-float-right">
+                                        <ChevronLeft size={20}/>
+                                        <ChevronLeft/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="flex items-end border-l border-(--line) p-10!">

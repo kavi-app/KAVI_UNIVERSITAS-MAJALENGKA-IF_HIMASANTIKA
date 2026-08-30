@@ -52,7 +52,7 @@ export default function CircleInformationSection({ data }) {
                   <div>{data.desc}</div>
                 </div>
               </div>
-              <div className="flex justify-center items-center h-1/2">
+              <div className="flex justify-center h-1/2">
                 <div className="w-[80%]">
                   <h1>{data.title2}</h1>
                   <div>
@@ -76,6 +76,7 @@ export default function CircleInformationSection({ data }) {
                 {data.list.map((circle, index) => {
                   const itemAngle = (360 / data.list.length) * index;
                   const rotate = (((-itemAngle - angle) % 360) + 360) % 360;
+                  const Icon = circle.icon
 
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
@@ -83,7 +84,7 @@ export default function CircleInformationSection({ data }) {
                         className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60" : "w-50 h-50"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
                         style={{ transform: `rotate(${-itemAngle - angle}deg)`, boxShadow: rotate <= 100 && rotate >= 60 && "var(--shadow)" }}
                       >
-                        {`${circle.title}`}
+                        <Icon size={60} strokeWidth={3} />
                       </div>
                     </div>
                   );
@@ -97,7 +98,7 @@ export default function CircleInformationSection({ data }) {
   } else {
     return (
       <section ref={sectionRef} className="w-full h-[400vh]">
-        <div className="sticky top-0 h-screen flex justify-center items-center border-(--line) border-b">
+        <div className="sticky top-0 h-screen flex justify-center items-end border-(--line) border-b">
           <div className="w-[50%] h-screen border-(--line) border-t border-r">
             <div className="w-full h-[90%] relative border-(--line) border-b">
               <div className="flex justify-center items-center h-1/2">
@@ -106,7 +107,7 @@ export default function CircleInformationSection({ data }) {
                   <div>{data.desc}</div>
                 </div>
               </div>
-              <div className="flex justify-center items-center h-1/2">
+              <div className="flex justify-center h-1/2">
                 <div className="w-[60%]">
                   <h1>{data.title2}</h1>
                   <div>
@@ -124,13 +125,14 @@ export default function CircleInformationSection({ data }) {
               </div>
             </div>
           </div>
-          <Triangle style={"absolute rotate-90 left-1/2"} />
+          <Triangle style={"absolute rotate-90 left-1/2 top-1/2"} />
           <div className="w-[50%] h-screen relative overflow-hidden">
             <div className="absolute top-50 -right-30 w-150 h-150 rounded-full bg-white border border-(--line)">
               <div className="absolute inset-0" style={{ transform: `rotate(${angle}deg)` }}>
                 {data.list.map((circle, index) => {
                   const itemAngle = (360 / data.list.length) * index;
                   const rotate = (((-itemAngle - angle) % 360) + 360) % 360;
+                  const Icon = circle.icon
 
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
@@ -138,7 +140,7 @@ export default function CircleInformationSection({ data }) {
                         className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60" : "w-50 h-50"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
                         style={{ transform: `rotate(${-itemAngle - angle}deg)`, boxShadow: rotate <= 100 && rotate >= 60 && "var(--shadow)" }}
                       >
-                        {`${circle.title}`}
+                        <Icon size={60} strokeWidth={3} />
                       </div>
                     </div>
                   );

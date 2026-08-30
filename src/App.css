@@ -328,3 +328,23 @@ h1 {
     opacity: 1;
   }
 }
+
+.anim-float-left {
+  animation: float-left 2s infinite;
+}
+
+@keyframes float-left {
+  0% {transform: translateX(0rem);}
+  50% {transform: translateX(-1rem);}
+  100% {transform: translateX(0rem);}
+}
+
+.anim-float-right {
+  animation: float-right 2s infinite;
+}
+
+@keyframes float-right {
+  0% {transform: translateX(0rem);}
+  50% {transform: translateX(1rem);}
+  100% {transform: translateX(0rem);}
+}
