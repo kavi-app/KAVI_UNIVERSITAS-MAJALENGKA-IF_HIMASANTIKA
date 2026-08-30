@@ -46,9 +46,15 @@ export default function CircleInformationSection({ data }) {
         <div className="sticky top-0 h-screen border-(--line) border-b">
           <div className="w-full h-screen border-(--line) border-t">
             <div className="w-full h-[90%] relative border-(--line) border-b">
-              <div className="flex justify-center items-center h-full">
+              <div className="flex justify-center items-center h-1/2">
                 <div className="w-[80%]">
-                  <h1>{data.title} anjay</h1>
+                  <h1>{data.title}</h1>
+                  <div>{data.desc}</div>
+                </div>
+              </div>
+              <div className="flex justify-center items-center h-1/2">
+                <div className="w-[80%]">
+                  <h1>{data.title2}</h1>
                   <div>
                     {data.list.map((item) => {
                       if (item.title == activeCircle) {
@@ -94,9 +100,15 @@ export default function CircleInformationSection({ data }) {
         <div className="sticky top-0 h-screen flex justify-center items-center border-(--line) border-b">
           <div className="w-[50%] h-screen border-(--line) border-t border-r">
             <div className="w-full h-[90%] relative border-(--line) border-b">
-              <div className="flex justify-center items-center h-full">
+              <div className="flex justify-center items-center h-1/2">
                 <div className="w-[60%]">
                   <h1>{data.title}</h1>
+                  <div>{data.desc}</div>
+                </div>
+              </div>
+              <div className="flex justify-center items-center h-1/2">
+                <div className="w-[60%]">
+                  <h1>{data.title2}</h1>
                   <div>
                     {data.list.map((item) => {
                       if (item.title == activeCircle) {

@@ -21,7 +21,9 @@ export const data = {
     desc: "Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024.",
   },
   circle_information_section: {
-    title: "MISI",
+    title: "VISI",
+    title2: "MISI",
+    desc: "snadkjnaskjdnkajsndkjnaskjd",
     list: [
       { title: "V", value: "Tumbuh kembangnya sikap kewirusahaan dalam bidang rekayasa teknologi di kalangan civitas akademika program Studi S1 Teknik Informatika." },
       { title: "IV", value: "Terselenggaranya kegiatan pengabdian kepada masyarakat dalam bidang rekayasa teknologi." },
