@@ -16,14 +16,13 @@ export const data = {
   },
   second_section: {
     title: "Program Studi S1 Teknik Informatika",
-    main_title: "VISI &",
-    marking_main_title: "MISI",
-    desc: "Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024.",
+    main_title: "TENTANG",
+    desc: "Program Studi S1 Teknik Informatika Universitas Muhammadiyah Cirebon (UMC) adalah institusi pendidikan tinggi yang berdedikasi untuk mencetak lulusan unggul, inovatif, dan berakhlak mulia di bidang teknologi informasi. Kami membekali mahasiswa dengan keahlian praktis dan teoretis yang relevan dengan kebutuhan industri digital masa kini.",
   },
   circle_information_section: {
     title: "VISI",
     title2: "MISI",
-    desc: "snadkjnaskjdnkajsndkjnaskjd",
+    desc: "Menjadi Program Studi yang Unggul dalam mencetak Tenaga terampil yang Islami dan Mandiri di Wilayah Jawa Barat pada tahun 2024.",
     list: [
       { title: "V", value: "Tumbuh kembangnya sikap kewirusahaan dalam bidang rekayasa teknologi di kalangan civitas akademika program Studi S1 Teknik Informatika." },
       { title: "IV", value: "Terselenggaranya kegiatan pengabdian kepada masyarakat dalam bidang rekayasa teknologi." },
