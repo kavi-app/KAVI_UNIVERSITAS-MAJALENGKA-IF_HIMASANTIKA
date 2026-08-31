@@ -1,11 +1,8 @@
 import fikar from "../assets/images/people/5.png";
 import septian from "../assets/images/people/1.png";
-import ina from "../assets/images/people/2.png";
-import putra from "../assets/images/people/3.png";
 import roni from "../assets/images/people/4.png";
-import dimas from "../assets/images/people/6.jpeg";
 
-import img1 from "../assets/images/1.jpg";
+import img1 from "../assets/images/lab.jpg";
 import img2 from "../assets/images/2.jpg";
 import { Cpu, GraduationCap, Mosque, University, UsersRound } from "lucide-react";
 
@@ -36,21 +33,24 @@ export const data = {
     { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
     { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
     { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
-    { name: "Ina Dina", role: "Anggota", ig: "@andkjsnd", img: ina },
-    { name: "Dimas Candra Febrianto", role: "Anggota", ig: "@andkjsnd", img: dimas },
-    { name: "Moch Noordin Saputra", role: "Anggota", ig: "@andkjsnd", img: putra },
+
   ],
   img_section: [
     {
-      title: "ASADAD",
+      title: "LABORATORIUM KOMPUTER",
       image: img1,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!",
+      desc: "Fasilitas lab yang dirancang khusus untuk praktik pemrograman, rekayasa perangkat lunak, dan pengolahan data.",
     },
     {
-      title: "ASADAD",
+      title: "RUANG KELAS INTERAKTIVE",
       image: img2,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!",
+      desc: " Fasilitas ruang kelas yang sangat memadai, kondusif, dan dilengkapi dengan pendingin ruangan (AC) serta proyektor / layar pintar (smartboard) untuk mendukung presentasi dan pengajaran visual.",
     },
+        {
+      title: "RUANG PRAKTIK JARINGAN",
+      image: img2,
+      desc: "Area pembelajaran bagi mahasiswa untuk melakukan praktik perakitan hardware dan instalasi infrastruktur jaringan komputer secara langsung.",
+    }
   ],
   project_section: {
     title: "Kegiatan Kampus.",

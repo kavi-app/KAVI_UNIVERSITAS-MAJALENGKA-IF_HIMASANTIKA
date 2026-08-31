@@ -53,7 +53,7 @@ export default function ImgSection({data}) {
 
                     {isDesktop && (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                            <div className='text-2xl text-white mb-2!'>{name}</div>
+                            <div className='text-2xl text-white font-bold mb-2!'>{name}</div>
                             {/* <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
                                 <div className='w-full h-full rounded-md bg-white'></div>
                             </div> */}

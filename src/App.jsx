@@ -43,7 +43,7 @@ function App() {
               </div>
 
               {/* MENU */}
-              <div className="hidden items pl-160! gap-8 md:flex">
+              <div className="hidden items gap-8 md:flex">
                 <a href="#home" className="font-medium text-gray-700 transition hover:text-red-600">
                   Home
                 </a>
