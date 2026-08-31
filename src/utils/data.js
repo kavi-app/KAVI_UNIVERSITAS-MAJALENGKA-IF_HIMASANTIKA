@@ -53,14 +53,16 @@ export const data = {
     },
   ],
   project_section: {
-    title: "Ideas I've Turned Into Reality.",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio in quas nesciunt dolores aperiam vero totam labore voluptatem recusandae pariatur laborum, id nam harum alias soluta ipsa. Ut, atque!.",
+    title: "Kegiatan Kampus.",
+    desc: "Beragam kegiatan akademik, organisasi, sosial, dan pengembangan minat bakat untuk mendukung pengalaman serta prestasi mahasiswa.",
     list: [
-      { name: "1", img: "" },
-      { name: "2", img: "" },
-      { name: "3", img: "" },
-      { name: "4", img: "" },
-      { name: "5", img: "" },
+      { name: "1", img: "./public/kegiatan/1.jpeg" },
+      { name: "2", img: "./public/kegiatan/2.jpeg" },
+      { name: "3", img: "./public/kegiatan/3.jpeg" },
+      { name: "4", img: "./public/kegiatan/4.jpg" },
+      { name: "5", img: "./public/kegiatan/5.jpeg" },
+      { name: "5", img: "./public/kegiatan/6.jpeg" },
+      { name: "5", img: "./public/kegiatan/7.jpeg" },
     ],
   },
   client_section: {

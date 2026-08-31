@@ -30,11 +30,11 @@ export default function ProjectSection({data}) {
             >
               {data.list.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className='w-60 h-70 m-auto! border border-(--line) rounded-2xl p-3!'>
+                    <div className='w-60 h-60 m-auto! overflow-hidden border border-(--line) rounded-2xl p-3!'>
                       {item.img == "" ? (
                         <div className='w-full h-full rounded-xl bg-cyan-200'>{item.name}</div>
                       ) : (
-                        <img src={item.img} className='w-full h-full rounded-xl'/>
+                        <img src={item.img} className='w-full rounded-xl'/>
                       )}
                     </div>
                   </SwiperSlide> 
@@ -59,11 +59,11 @@ export default function ProjectSection({data}) {
           </div>
           <div className='w-[40%] h-full flex flex-col'>
             {data.list.map((item, index) => (
-                <div key={index} className='w-80 h-90 m-auto! border border-(--line) rounded-3xl p-3!'>
+                <div key={index} className='w-80 h-80 overflow-hidden m-auto! border border-(--line) rounded-3xl p-3!'>
                   {item.img == "" ? (
                     <div className='w-full h-full rounded-2xl bg-cyan-200'>{item.name}</div>
                   ) : (
-                    <img src={item.img} className='w-full h-full rounded-2xl'/>
+                    <img src={item.img} className='w-full rounded-2xl'/>
                   )}
                 </div>
             ))}
