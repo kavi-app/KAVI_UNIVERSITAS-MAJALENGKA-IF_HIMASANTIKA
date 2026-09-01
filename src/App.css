@@ -357,3 +357,9 @@ h1 {
   border-top: none;
   border-bottom: none;
 }
+
+.img {
+  background-image: url("../public/8642914.gif");
+  background-size: cover;
+
+}
