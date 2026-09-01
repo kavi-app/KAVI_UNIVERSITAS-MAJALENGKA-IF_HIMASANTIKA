@@ -58,30 +58,48 @@ export default function ClientSection({data}) {
                             clipPath: `circle(${progress}% at 50% 50%)`
                         }}
                     >
-                        <div className="flex items-start border-r border-(--line) pt-30! p-10! w-[30%]">
-                            <div>
-                                <h2 className="text-5xl font-bold mb-5!">{data.caption.caption1.title}</h2>
-                                <p>{data.caption.caption1.desc}</p>
-                            </div>
-                        </div>
-                        <div className="h-full flex items-center">
-                            <div>
-                                <h1>Ayo Daftar sekarang!</h1>
-                                <div className="flex justify-center items-center gap-3">
-                                    <div className="flex items-center anim-float-left">
-                                        <ChevronRight/>
-                                        <ChevronRight size={20}/>
-                                    </div>
-                                    <h2 className="font-bold text-xl">TEST</h2>
-                                    <div className="flex items-center anim-float-right">
-                                        <ChevronLeft size={20}/>
-                                        <ChevronLeft/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="w-[70%] h-full flex flex-col justify-center items-center p-10!">
+                    <div className="w-full max-w-200">
+
+
+        {/* Banner */}
+        <div className="h-full flex items-center justify-center w-full"> 
+        <div className="w-full max-w-225 aspect-video overflow-hidden">
+            <img
+                src={data.banner}
+                alt="Banner"
+                className="w-full h-full object-cover"
+            />
+        </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-6">
+
+            <div className="flex justify-center items-center gap-3 mt-3">
+                <div className="flex items-center anim-float-left">
+                    <ChevronRight/>
+                    <ChevronRight size={20}/>
+                </div>
+
+                <h2 className="font-bold text-xl">
+                    DAFTAR SEKARANG
+                </h2>
+
+                <div className="flex items-center anim-float-right">
+                    <ChevronLeft size={20}/>
+                    <ChevronLeft/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
                         <div className="flex items-end border-l border-(--line) pb-30! p-10! w-[30%]">
-                            <div>
+                            <div className="mt-6">
+                                <h1 className="text-left text-red-700 font-bold text-2xl">
+                                    Ayo Daftar Sekarang!
+                                </h1>   
                                 <h2 className="text-5xl font-bold mb-5!">{data.caption.caption2.title}</h2>
                                 <p>{data.caption.caption2.desc}</p>
                             </div>

@@ -4,8 +4,9 @@ import roni from "../assets/images/people/4.png";
 
 import img1 from "../assets/images/lab.jpg";
 import img2 from "../assets/images/kelas1.jpeg";
-import img3 from "../assets/images/lab.jpg";
+import img3 from "../assets/images/praktik.jpeg";
 import { Cpu, GraduationCap, Mosque, University, UsersRound } from "lucide-react";
+
 
 export const data = {
   first_section: {
@@ -74,6 +75,7 @@ export const data = {
   client_section: {
     title: "Tumbuh Bersama, Raih Masa Depan.",
     desc: "Didukung oleh dosen profesional, mahasiswa yang aktif dan beragam, serta alumni yang terus berkarya di berbagai bidang. Kami membangun lingkungan pendidikan yang mendorong setiap individu untuk berkembang, berprestasi, dan memberikan dampak positif.",
+    banner: "/src/assets/images/banner/banner.jpg",
     caption: {
       caption1: {title: "Saatnya Jadi Bagian dari Dunia Digital", desc: "Kembangkan kemampuanmu di bidang teknologi, programming, dan inovasi bersama Program Studi Informatika. Belajar, berkarya, dan persiapkan dirimu untuk menghadapi masa depan digital."},
       caption2: {title: "Masa Depan Dimulai dari Kode Pertamamu", desc: "Punya minat di dunia teknologi? Wujudkan potensimu bersama Program Studi Informatika. Asah kemampuan, ciptakan inovasi, dan raih peluang karier di dunia digital."},
