@@ -10,8 +10,8 @@ export default function FirstSection({data}) {
                 <div>
                     <div className="relative text-(--text)">
                     <div className='flex justify-center'>
-                        <p className="text-8xl from-top">{data.title1}</p>
-                        <p className="text-8xl from-left [--delay:300ms]">{data.title2}</p>
+                        <p className="img text-transparent bg-clip-text font-bold text-8xl from-top">{data.title1}</p>
+                        <p className="img text-transparent bg-clip-text font-bold text-8xl from-left [--delay:300ms]">{data.title2}</p>
                     </div>
                     <div className="text-[10px] px-2! flex justify-between from-bottom [--delay:600ms]">
                         {data.desc.map((item, index) => (
@@ -31,10 +31,10 @@ export default function FirstSection({data}) {
                         <div className="relative text-(--text)">
                         <div className='grad-circle [--grad-cr:rgba(255,0,132,0.3)]'></div>
                         <div className='flex'>
-                            <p className="text-7xl lg:text-9xl from-top">{data.title1}</p>
-                            <p className="text-7xl lg:text-9xl from-left [--delay:300ms]">{data.title2}</p>
+                            <p className="img text-transparent bg-clip-text font-bold text-7xl lg:text-[12rem] from-top">{data.title1}</p>
+                            <p className="img from-pink-500 to-violet-500 text-transparent bg-clip-text font-bold text-7xl lg:text-[12rem] from-left [--delay:300ms]">{data.title2}</p>
                         </div>
-                        <div className="text-sm px-2! flex justify-between from-bottom [--delay:600ms]">
+                        <div className="text-xl px-2! flex justify-between from-bottom [--delay:600ms]">
                             {data.desc.map((item, index) => (
                                 <p key={index}>{item}</p>
                             ))}

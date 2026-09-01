@@ -14,21 +14,37 @@ export default function ClientSection({data}) {
         if(isMobile){
             return (
                 <>
-                    <div className="top-0 inset-0 h-screen absolute text-black bg-white border-b border-(--line)"
+                    <div className="grid grid-rows-3 top-0 inset-0 h-screen absolute text-black bg-white border-b border-(--line)"
                         style={{
                             clipPath: `circle(${progress}% at 50% 50%)`
                         }}
                     >
-                        <div className="flex items-start border-r border-(--line) p-10!">
+                        <div className="border-b border-(--line) p-10!">
                             <div>
-                                <h1>Class</h1>
-                                <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis itaque ratione nam! Iusto ea hic fuga earum dolor vel doloremque quas, ad, labore aliquam suscipit ipsum! Eligendi nisi et incidunt!</p>
+                                <h2 className="text-3xl font-bold mb-5!">{data.caption.caption1.title}</h2>
+                                <p className="w-50 text-xs">{data.caption.caption1.desc}</p>
                             </div>
                         </div>
-                        <div className="flex items-end border-l border-(--line) p-10!">
+                        <div className="flex items-center">
+                            <div className="w-full">
+                                <h2 className="text-center text-3xl font-bold mb-5!">Ayo Daftar sekarang!</h2>
+                                <div className="flex justify-center items-center gap-3">
+                                    <div className="flex items-center anim-float-left">
+                                        <ChevronRight/>
+                                        <ChevronRight size={20}/>
+                                    </div>
+                                    <h2 className="font-bold text-xl">TEST</h2>
+                                    <div className="flex items-center anim-float-right">
+                                        <ChevronLeft size={20}/>
+                                        <ChevronLeft/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-end border-t border-(--line) p-10!">
                             <div>
-                                <h1>Class</h1>
-                                <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis itaque ratione nam! Iusto ea hic fuga earum dolor vel doloremque quas, ad, labore aliquam suscipit ipsum! Eligendi nisi et incidunt!</p>
+                                <h2 className="text-3xl font-bold mb-5!">{data.caption.caption2.title}</h2>
+                                <p className="w-50 text-xs">{data.caption.caption2.desc}</p>
                             </div>
                         </div>
                     </div>
@@ -42,10 +58,10 @@ export default function ClientSection({data}) {
                             clipPath: `circle(${progress}% at 50% 50%)`
                         }}
                     >
-                        <div className="flex items-start border-r border-(--line) p-10!">
+                        <div className="flex items-start border-r border-(--line) pt-30! p-10! w-[30%]">
                             <div>
-                                <h1>Class</h1>
-                                <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis itaque ratione nam! Iusto ea hic fuga earum dolor vel doloremque quas, ad, labore aliquam suscipit ipsum! Eligendi nisi et incidunt!</p>
+                                <h2 className="text-5xl font-bold mb-5!">{data.caption.caption1.title}</h2>
+                                <p>{data.caption.caption1.desc}</p>
                             </div>
                         </div>
                         <div className="h-full flex items-center">
@@ -64,10 +80,10 @@ export default function ClientSection({data}) {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-end border-l border-(--line) p-10!">
+                        <div className="flex items-end border-l border-(--line) pb-30! p-10! w-[30%]">
                             <div>
-                                <h1>Class</h1>
-                                <p className="w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis itaque ratione nam! Iusto ea hic fuga earum dolor vel doloremque quas, ad, labore aliquam suscipit ipsum! Eligendi nisi et incidunt!</p>
+                                <h2 className="text-5xl font-bold mb-5!">{data.caption.caption2.title}</h2>
+                                <p>{data.caption.caption2.desc}</p>
                             </div>
                         </div>
                     </div>
@@ -99,8 +115,8 @@ export default function ClientSection({data}) {
                         <div className='w-full grid grid-cols p-10!'>
                             {data.list.map((item, index) => (
                                 <div key={index} className='flex-1 p-5!'>
-                                    <h2 className='text-[5rem]'>{item.name}</h2>
-                                    <h3 className='text-xl border-t border-(--line) border-dashed pt-5!'>{item.desc}</h3>
+                                    <h2 className='text-[2rem]'>{item.name}</h2>
+                                    <h3 className='text-sm border-t border-(--line) border-dashed pt-5!'>{item.desc}</h3>
                                 </div>
                             ))}
                         </div>
@@ -118,16 +134,16 @@ export default function ClientSection({data}) {
                     <div className='w-[25%] h-5 bg-black'></div>
                 </div>
                 <div className='bg-black h-screen sticky top-0 flex flex-col justify-between overflow-hidden'>
-                    <div className='grid grid-cols-2 p-10!'>
+                    <div className='grid grid-cols-2 pt-20! p-10!'>
                         <h1>{data.title}</h1>
-                        <p className='text-3xl'>{data.desc}</p>
+                        <p className='text-2xl'>{data.desc}</p>
                     </div>
                     <Layer/>
-                    <div className={`grid-cols-3 w-full grid p-10!`}>
+                    <div className={`grid-cols-6 w-full grid p-10!`}>
                         {data.list.map((item, index) => (
                             <div key={index} className='flex-1 p-5!'>
-                                <h2 className='text-[8rem]'>{item.name}</h2>
-                                <h3 className='text-2xl border-t border-(--line) border-dashed pt-5!'>{item.desc}</h3>
+                                <h2 className='text-[5rem]'>{item.name}</h2>
+                                <h3 className='text-md border-t border-(--line) border-dashed pt-5!'>{item.desc}</h3>
                             </div>
                         ))}
                     </div>
