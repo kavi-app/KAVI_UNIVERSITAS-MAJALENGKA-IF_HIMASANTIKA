@@ -30,7 +30,7 @@ function App() {
         }}
       >
         <main ref={mainRef}>
-          <header className="relative border-b border-(--line)">
+          <header className="relative border-b border-(--line) z-99">
             <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10! py-5">
               {/* LOGO */}
               <div className="flex items-center">
@@ -77,11 +77,11 @@ function App() {
           <SecondSection data={data.second_section} />
           <CircleInformationSection data={data.circle_information_section} />
           <ImgSection data={data.img_section} />
-          <Carousell />
 
           <PeopleInformationSection data={data.people_information_section} />
           <ProjectSection data={data.project_section} />
           <ClientSection data={data.client_section} />
+          <Carousell />
           <Footer />
         </main>
       </ReactLenis>

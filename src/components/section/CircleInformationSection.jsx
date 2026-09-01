@@ -81,10 +81,10 @@ export default function CircleInformationSection({ data }) {
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
                       <div
-                        className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60" : "w-50 h-50"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
+                        className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60 " : "w-50 h-50 text-(--line)"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
                         style={{ transform: `rotate(${-itemAngle - angle}deg)`, boxShadow: rotate <= 100 && rotate >= 60 && "var(--shadow)" }}
                       >
-                        <Icon size={60} strokeWidth={3} />
+                        <Icon size={60} />
                       </div>
                     </div>
                   );
@@ -137,10 +137,10 @@ export default function CircleInformationSection({ data }) {
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
                       <div
-                        className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60" : "w-50 h-50"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
+                        className={`bg-white ${rotate <= 100 && rotate >= 60 ? "w-60 h-60" : "w-50 h-50 text-(--line)"} rounded-full border border-(--line) flex items-center justify-center transition-all ease-in-out`}
                         style={{ transform: `rotate(${-itemAngle - angle}deg)`, boxShadow: rotate <= 100 && rotate >= 60 && "var(--shadow)" }}
                       >
-                        <Icon size={60} strokeWidth={3} />
+                        <Icon size={60} />
                       </div>
                     </div>
                   );

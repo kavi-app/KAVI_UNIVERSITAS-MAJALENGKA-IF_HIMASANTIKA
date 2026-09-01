@@ -10,7 +10,7 @@ export default function Carousell() {
                     {[...data, ...data].map((item, index) => (
                     <div  key={index} className="shrink-0 p-2 bg-(--background)">
                         <div className="p-2 text-3xl mt-5">
-                            <p>EXPERIMENT, EXPERIENCE, EXPERT.</p>
+                            <p>INFORMATIKA - UNIVERSITAS MUHAMMADIYAH CIREBON</p>
                         </div>
                     </div>
                     ))}

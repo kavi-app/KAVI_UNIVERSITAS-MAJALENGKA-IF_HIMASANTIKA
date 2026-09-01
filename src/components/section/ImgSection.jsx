@@ -34,7 +34,7 @@ export default function ImgSection({data}) {
         return (
             <div ref={sectionRef} className={`w-full ${ isMobile ? 'h-[70vh]' : 'h-screen'}`}>
                 <div className={`relative w-full ${isMobile ? 'h-full' : 'h-screen'} overflow-hidden`}>
-                    <img src={img} className={`absolute w-full -translate-y-1/2 ${isMobile ? 'h-screen' : 'h-[200vh]'} ${ts ? 'opacity-50' : 'opacity-100'}`} alt="test" style={{
+                    <img src={img} className={`absolute w-full -translate-y-1/2 ${isMobile ? 'h-screen' : 'h-[200vh]'} ${ts ? 'opacity-20 grayscale' : 'opacity-50'}`} alt="test" style={{
                         transform: `translateY(${scroll / 3}px)`
                     }} />
                     <div className='absolute left-1/2 -translate-x-1/2 w-[50%] h-screen border-x border-(--line)'></div>
@@ -42,29 +42,30 @@ export default function ImgSection({data}) {
                     {isMobile && (
                         <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <div className='text-xl text-white mb-2!'>{name}</div>
-                            {/* <div className='h-60 w-70 p-2! rounded-lg border border-(--line)'>
-                                <div className='w-full h-full rounded-md bg-white'></div>
-                            </div> */}
+                            <div className='h-50 w-70 p-2! rounded-lg border border-(--line)'>
+                                <div className='w-full overflow-hidden h-full rounded-md bg-white'>
+                                    <img src={img} className={`w-full`} alt="test"/>
+                                </div>
+                            </div>
                             <div className='flex justify-end mt-2!'>
                                 <p className='text-xs w-70 text-white'>{desc}</p>
                             </div>
                         </div>
                     )}
-                    <div className='flex -col gap-4 text-wrap max-w-lg px-10! my--20!'>
-                        <h2 className="font-bold text-4xl">FASILITAS AKADEMIK.</h2>
-                    </div>
                     {isDesktop && (
                         <div className="flex w-full h-full">
-                        <div className="relative w-[58%] h-full overFlow-hidden border-r border-(--line)">  
-                        <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                            <div className='text-2xl text-white font-bold mb-2!'>{name}</div>
-                            {/* <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
-                                <div className='w-full h-full rounded-md bg-white'></div>
-                            </div> */}
-                            <div className='flex justify-end mt-2!'>
-                                <p className='w-100 text-white'>{desc}</p>
-                            </div>
-                            </div>
+                        <div className="relative w-[58%] h-full overFlow-hidden">  
+                            <div onMouseEnter={() => setTs(true)} onMouseLeave={() => setTs(false)} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                                <div className='text-2xl text-white font-bold mb-2!'>{name}</div>
+                                    <div className='h-100 w-150 p-2! rounded-lg border border-(--line)'>
+                                        <div className='w-full h-full rounded-md bg-white overflow-hidden'>
+                                            <img src={img} className={`w-full`} alt="test"/>
+                                        </div>
+                                    </div>
+                                    <div className='flex justify-end mt-2!'>
+                                        <p className='w-100 text-white'>{desc}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     )}
@@ -80,7 +81,7 @@ export default function ImgSection({data}) {
                 {data.map((item, index) => (
                     <Image key={index} name={item.title} img={item.image} desc={item.desc}/>
                 ))}
-                { isDesktop && (<p className='work-title'>Work</p>)}
+                { isDesktop && (<p className='work-title'>FASILITAS</p>)}
             </section>
         </>
     )

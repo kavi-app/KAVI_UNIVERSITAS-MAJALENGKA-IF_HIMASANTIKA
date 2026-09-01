@@ -30,11 +30,15 @@ export const data = {
       { icon: Mosque, title: "5", value: "Menanamkan nilai-nilai Islam kepada seluruh civitas akademika Program Studi S1 Teknik Informatika secara komperhensif." },
     ],
   },
-  people_information_section: [
-    { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
-    { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
-    { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
-  ],
+  people_information_section: {
+    title: "FASILITAS AKADEMIK.",
+    desc: "Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :",
+    list: [
+      { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
+      { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
+      { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
+    ]
+  },
     
   img_section: [
     {
@@ -68,12 +72,19 @@ export const data = {
     ],
   },
   client_section: {
-    title: "Our Story in Stats.",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum unde laborum at repudiandae accusantium velit quisquam nesciunt totam eum nam, expedita optio voluptatem nemo temporibus dolor voluptatibus ab omnis iste.",
+    title: "Tumbuh Bersama, Raih Masa Depan.",
+    desc: "Didukung oleh dosen profesional, mahasiswa yang aktif dan beragam, serta alumni yang terus berkarya di berbagai bidang. Kami membangun lingkungan pendidikan yang mendorong setiap individu untuk berkembang, berprestasi, dan memberikan dampak positif.",
+    caption: {
+      caption1: {title: "Saatnya Jadi Bagian dari Dunia Digital", desc: "Kembangkan kemampuanmu di bidang teknologi, programming, dan inovasi bersama Program Studi Informatika. Belajar, berkarya, dan persiapkan dirimu untuk menghadapi masa depan digital."},
+      caption2: {title: "Masa Depan Dimulai dari Kode Pertamamu", desc: "Punya minat di dunia teknologi? Wujudkan potensimu bersama Program Studi Informatika. Asah kemampuan, ciptakan inovasi, dan raih peluang karier di dunia digital."},
+    },
     list: [
-      { name: "9+", desc: "Years of Expertise and Growth." },
-      { name: "5", desc: "Talented Minds Driving Innovation." },
-      { name: "25+", desc: "Thrilled Clients." },
+      { name: "204", desc: "Dibimbing oleh dosen ahli dan berpengalaman di bidangnya." },
+      { name: "110", desc: "Tenaga Pendidik Berkualitas." },
+      { name: "5,896", desc: "Komunitas mahasiswa yang aktif, kreatif, dan beragam." },
+      { name: "11,017", desc: "Lulusan unggul yang siap berkontribusi bagi masyarakat." },
+      { name: "23", desc: "Beragam Prodi, Satu Tujuan." },
+      { name: "587", desc: "Publikasi & Karya Akademik." },
     ],
   },
 };
