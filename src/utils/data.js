@@ -3,7 +3,8 @@ import septian from "../assets/images/people/1.png";
 import roni from "../assets/images/people/4.png";
 
 import img1 from "../assets/images/lab.jpg";
-import img2 from "../assets/images/2.jpg";
+import img2 from "../assets/images/kelas1.jpeg";
+import img3 from "../assets/images/lab.jpg";
 import { Cpu, GraduationCap, Mosque, University, UsersRound } from "lucide-react";
 
 export const data = {
@@ -33,8 +34,8 @@ export const data = {
     { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
     { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
     { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
-
   ],
+    
   img_section: [
     {
       title: "LABORATORIUM KOMPUTER",
@@ -48,9 +49,10 @@ export const data = {
     },
         {
       title: "RUANG PRAKTIK JARINGAN",
-      image: img2,
+      image: img3,
       desc: "Area pembelajaran bagi mahasiswa untuk melakukan praktik perakitan hardware dan instalasi infrastruktur jaringan komputer secara langsung.",
-    }
+    },
+
   ],
   project_section: {
     title: "Kegiatan Kampus.",
