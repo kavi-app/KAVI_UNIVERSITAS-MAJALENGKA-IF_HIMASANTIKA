@@ -7,26 +7,21 @@ export default function PeopleInformationSection({data}) {
 
     return (
         <section className="border-b border-(--line) pb-20!">
-            {isMobile && (
-                <div className={`grid-cols grid px-10! my-20!`}>
-                    <h1>FASILITAS AKADEMIK.</h1>
-                    <h2 className="p-5! text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, blanditiis voluptatum? Autem voluptates nisi asperiores mollitia quasi aliquam, fugit voluptatem quas impedit nobis quaerat recusandae laudantium tempora! Animi, voluptatibus tempora.</h2>
-                </div>
-            )}
-            
-            {isDesktop && (
-                <div className={`grid-cols-2 grid px-10! my-20!`}>
-                    <div >
-                    <h2 className="font-bold text-4xl">FASILITAS AKADEMIK.</h2>
-
-                    <p className="text-ms">
-                        Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :
-                    </p>
-                    </div>
-                </div>
-            )}
-          <div className={`${isMobile ? 'grid-cols' : 'grid-cols-2'} w-full grid`}>
-            {data.map((item, index) => {
+        {isMobile && (
+            <div className={`flex flex-col gap-4 text-wrap max-w-lg px-10! my-20!`}>
+                <h2 className="font-bold text-4xl">{data.title}</h2>
+                <p className="text-ms">{data.desc}</p>
+            </div>             
+        )}
+        
+        {isDesktop && (
+            <div className={`flex flex-col gap-4 text-wrap max-w-lg px-10! my-20!`}>
+                <h2 className="font-bold text-4xl">{data.title}</h2>
+                <p className="text-ms">{data.desc}</p>
+            </div>
+        )}
+        <div className={`${isMobile ? 'grid-cols' : 'grid-cols-2'} w-full grid`}>
+            {data.list.map((item, index) => {
                 if(isMobile){
                     return (
                         <div key={index} className='w-full p-2!'>
@@ -87,7 +82,7 @@ export default function PeopleInformationSection({data}) {
                     }   
                 }
             })}
-          </div>
+        </div>
         </section>
     )
 }
