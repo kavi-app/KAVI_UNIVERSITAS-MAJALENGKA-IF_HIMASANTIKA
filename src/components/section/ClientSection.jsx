@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/static-components */
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { useSectionProgress } from "../../hooks/useSectionProgress"
 import { useDeviceType } from "../../hooks/useDeviceType"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -9,6 +9,32 @@ export default function ClientSection({data}) {
     const section = useRef(null)
     const progress = useSectionProgress(section)
     const { isMobile } = useDeviceType()
+    const heroRef = useRef(null)
+
+    useEffect(() => {
+        const hero = heroRef.current
+        if(!hero) return
+        hero.buttonData = {
+            type: "action",
+            message: "Daftar Sekarang",
+        }
+
+        const handleClick = (e) => {
+            const event = e.detail?.originalEvent
+
+            if(event){
+                event.preventDefault()
+            }
+
+            console.log("Click detected in hero area!", e.detail)
+        }
+
+        hero.addEventListener("duetClick", handleClick)
+
+        return () => {
+            hero.removeEventListener("duetClick", handleClick)
+        }
+        }, [])
 
     function Layer() {
         if(isMobile){
@@ -58,38 +84,42 @@ export default function ClientSection({data}) {
                             clipPath: `circle(${progress}% at 50% 50%)`
                         }}
                     >
-                    <div className="w-[70%] h-full flex flex-col justify-center items-center p-10!">
+                    <div className="w-[100%] h-full flex flex-col justify-center items-center p-10!">
                     <div className="w-full max-w-200">
 
+        <duet-hero
+                ref={heroRef}
+                id="duet-hero_default_hero"
+                description="Saatnya Wujudkan Mimpi, Raih Masa Depan Gemilang"
+                button-label="Daftar Sekarang"
+                button-url="/daftar"
+            >
+                <div
+                className="text-5xl font-bold items-center flex justify-center text-red-700"
+                slot="heading">AYO DAFTAR SEKARANG!
+                </div>
+                <div slot="description"
+                    className="text-2xl justify-center items-center flex">
+                    Saatnya Wujudkan Mimpi, Raih Masa Depan Gemilang
+                </div>
+        </duet-hero>
 
-        {/* Banner */}
-        <div className="h-full flex items-center justify-center w-full"> 
-        <div className="w-full max-w-225 aspect-video overflow-hidden">
-            <img
-                src={data.banner}
-                alt="Banner"
-                className="w-full h-full object-cover"
-            />
-        </div>
-        </div>
+        <duet-grid responsive distribution="space-around" alignment="center">
+            <duet-grid-item margin="none">
+                <duet-icon size="x-large" background="category-family" name="category-personal"></duet-icon>
+            </duet-grid-item>            
+        </duet-grid>
+
+
 
         {/* CTA */}
-        <div className="mt-6">
-
+        <div className="flex items-end border-1 border-(--line) pb-30! p-10! w-full">
+            </div>
             <div className="flex justify-center items-center gap-3 mt-3">
-                <div className="flex items-center anim-float-left">
-                    <ChevronRight/>
-                    <ChevronRight size={20}/>
-                </div>
+            <div className="mt-6">
 
-                <h2 className="font-bold text-xl">
-                    DAFTAR SEKARANG
-                </h2>
 
-                <div className="flex items-center anim-float-right">
-                    <ChevronLeft size={20}/>
-                    <ChevronLeft/>
-                </div>
+
             </div>
         </div>
 
@@ -97,9 +127,6 @@ export default function ClientSection({data}) {
 </div>
                         <div className="flex items-end border-l border-(--line) pb-30! p-10! w-[30%]">
                             <div className="mt-6">
-                                <h1 className="text-left text-red-700 font-bold text-2xl">
-                                    Ayo Daftar Sekarang!
-                                </h1>   
                                 <h2 className="text-5xl font-bold mb-5!">{data.caption.caption2.title}</h2>
                                 <p>{data.caption.caption2.desc}</p>
                             </div>

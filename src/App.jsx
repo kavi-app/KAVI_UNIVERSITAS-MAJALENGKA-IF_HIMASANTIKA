@@ -35,7 +35,7 @@ function App() {
               {/* LOGO */}
               <div className="flex items-center">
                 <img src={logo} alt="Logo UMC" className="h-12 w-auto" />
-                <div className="ml-2 text-xs pl-3! text-gray-800">
+                <div className="ml-2 text-xs pl-3!">
                 <p>Universitas</p>
                 <p>Muhammadiyah</p>
                 <p>Cirebon</p>
@@ -67,7 +67,7 @@ function App() {
 
               {/* TOMBOL DAFTAR */}
               <div>
-                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-blue-700">
+                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-black">
                   Daftar sekarang
                 </a>
               </div>
