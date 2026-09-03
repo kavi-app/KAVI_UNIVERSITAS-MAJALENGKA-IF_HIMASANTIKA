@@ -11,7 +11,6 @@ import FirstSection from "./components/section/FirstSection";
 import { data } from "./utils/data";
 import SecondSection from "./components/section/SecondSection";
 import CircleInformationSection from "./components/section/CircleInformationSection";
-import PeopleInformationSection from "./components/section/PeopleInformationSection";
 import logo from "./assets/logo/UMC-1.webp";
 import Footer from "./components/footer";
 
@@ -36,9 +35,9 @@ function App() {
               <div className="flex items-center">
                 <img src={logo} alt="Logo UMC" className="h-12 w-auto" />
                 <div className="ml-2 text-xs pl-3! text-gray-800">
-                <p>Universitas</p>
-                <p>Muhammadiyah</p>
-                <p>Cirebon</p>
+                  <p>Universitas</p>
+                  <p>Muhammadiyah</p>
+                  <p>Cirebon</p>
                 </div>
               </div>
 
@@ -48,7 +47,7 @@ function App() {
                   Home
                 </a>
 
-                <a href="#Tentang" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="tentang" className="font-medium text-gray-700 transition hover:text-red-600">
                   Tentang
                 </a>
 
@@ -67,7 +66,10 @@ function App() {
 
               {/* TOMBOL DAFTAR */}
               <div>
-                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-blue-700">
+                <a
+                  href="https://pmb.umc.ac.id/signup?_gl=1*xnlmgs*_ga*MTY1OTk2Njg1NC4xNzg4MDk2MTY0*_ga_PY3128CM52*czE3ODgzOTk3NzIkbzIkZzEkdDE3ODg0MDM4MTUkajYwJGwwJGgw"
+                  className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-blue-700"
+                >
                   Daftar sekarang
                 </a>
               </div>
@@ -77,8 +79,6 @@ function App() {
           <SecondSection data={data.second_section} />
           <CircleInformationSection data={data.circle_information_section} />
           <ImgSection data={data.img_section} />
-
-          <PeopleInformationSection data={data.people_information_section} />
           <ProjectSection data={data.project_section} />
           <ClientSection data={data.client_section} />
           <Carousell />

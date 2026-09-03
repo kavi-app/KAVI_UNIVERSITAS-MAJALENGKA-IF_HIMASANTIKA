@@ -1,12 +1,7 @@
-import fikar from "../assets/images/people/5.png";
-import septian from "../assets/images/people/1.png";
-import roni from "../assets/images/people/4.png";
-
 import img1 from "../assets/images/lab.jpg";
 import img2 from "../assets/images/kelas1.jpeg";
 import img3 from "../assets/images/praktik.jpeg";
 import { Cpu, GraduationCap, Mosque, University, UsersRound } from "lucide-react";
-
 
 export const data = {
   first_section: {
@@ -31,16 +26,7 @@ export const data = {
       { icon: Mosque, title: "5", value: "Menanamkan nilai-nilai Islam kepada seluruh civitas akademika Program Studi S1 Teknik Informatika secara komperhensif." },
     ],
   },
-  people_information_section: {
-    title: "FASILITAS AKADEMIK.",
-    desc: "Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :",
-    list: [
-      { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
-      { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
-      { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
-    ]
-  },
-    
+
   img_section: [
     {
       title: "LABORATORIUM KOMPUTER",
@@ -52,12 +38,11 @@ export const data = {
       image: img2,
       desc: " Fasilitas ruang kelas yang sangat memadai, kondusif, dan dilengkapi dengan pendingin ruangan (AC) serta proyektor / layar pintar (smartboard) untuk mendukung presentasi dan pengajaran visual.",
     },
-        {
+    {
       title: "RUANG PRAKTIK JARINGAN",
       image: img3,
       desc: "Area pembelajaran bagi mahasiswa untuk melakukan praktik perakitan hardware dan instalasi infrastruktur jaringan komputer secara langsung.",
     },
-
   ],
   project_section: {
     title: "Kegiatan Kampus.",
@@ -77,8 +62,11 @@ export const data = {
     desc: "Didukung oleh dosen profesional, mahasiswa yang aktif dan beragam, serta alumni yang terus berkarya di berbagai bidang. Kami membangun lingkungan pendidikan yang mendorong setiap individu untuk berkembang, berprestasi, dan memberikan dampak positif.",
     banner: "/src/assets/images/banner/banner.jpg",
     caption: {
-      caption1: {title: "Saatnya Jadi Bagian dari Dunia Digital", desc: "Kembangkan kemampuanmu di bidang teknologi, programming, dan inovasi bersama Program Studi Informatika. Belajar, berkarya, dan persiapkan dirimu untuk menghadapi masa depan digital."},
-      caption2: {title: "Masa Depan Dimulai dari Kode Pertamamu", desc: "Punya minat di dunia teknologi? Wujudkan potensimu bersama Program Studi Informatika. Asah kemampuan, ciptakan inovasi, dan raih peluang karier di dunia digital."},
+      caption1: {
+        title: "Saatnya Jadi Bagian dari Dunia Digital",
+        desc: "Kembangkan kemampuanmu di bidang teknologi, programming, dan inovasi bersama Program Studi Informatika. Belajar, berkarya, dan persiapkan dirimu untuk menghadapi masa depan digital.",
+      },
+      caption2: { title: "Masa Depan Dimulai dari Kode Pertamamu", desc: "Punya minat di dunia teknologi? Wujudkan potensimu bersama Program Studi Informatika. Asah kemampuan, ciptakan inovasi, dan raih peluang karier di dunia digital." },
     },
     list: [
       { name: "204", desc: "Dibimbing oleh dosen ahli dan berpengalaman di bidangnya." },

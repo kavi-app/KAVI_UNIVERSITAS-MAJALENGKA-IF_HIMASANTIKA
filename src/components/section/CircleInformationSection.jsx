@@ -42,7 +42,7 @@ export default function CircleInformationSection({ data }) {
 
   if (isMobile) {
     return (
-      <section ref={sectionRef} className="w-full h-[400vh]">
+      <section id="visi-misi" ref={sectionRef} className="w-full h-[400vh]">
         <div className="sticky top-0 h-screen border-(--line) border-b">
           <div className="w-full h-screen border-(--line) border-t">
             <div className="w-full h-[90%] relative border-(--line) border-b">
@@ -76,7 +76,7 @@ export default function CircleInformationSection({ data }) {
                 {data.list.map((circle, index) => {
                   const itemAngle = (360 / data.list.length) * index;
                   const rotate = (((-itemAngle - angle) % 360) + 360) % 360;
-                  const Icon = circle.icon
+                  const Icon = circle.icon;
 
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
@@ -97,7 +97,7 @@ export default function CircleInformationSection({ data }) {
     );
   } else {
     return (
-      <section ref={sectionRef} className="w-full h-[400vh]">
+      <section id="visi-misi" ref={sectionRef} className="w-full h-[400vh]">
         <div className="sticky top-0 h-screen flex justify-center items-end border-(--line) border-b">
           <div className="w-[50%] h-screen border-(--line) border-t border-r">
             <div className="w-full h-[90%] relative border-(--line) border-b">
@@ -132,7 +132,7 @@ export default function CircleInformationSection({ data }) {
                 {data.list.map((circle, index) => {
                   const itemAngle = (360 / data.list.length) * index;
                   const rotate = (((-itemAngle - angle) % 360) + 360) % 360;
-                  const Icon = circle.icon
+                  const Icon = circle.icon;
 
                   return (
                     <div key={circle.title} className="absolute top-1/3 left-1/3" style={{ transform: `rotate(${itemAngle}deg) translateY(-300px)` }}>
