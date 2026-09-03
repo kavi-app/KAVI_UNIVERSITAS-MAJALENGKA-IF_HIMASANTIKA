@@ -57,7 +57,8 @@ export default function SecondSection({ data }) {
     )}
 
     <div
-      className={`absolute z-0 w-full overflow-hidden h-screen grid grid-cols-${count}`}
+      className={`absolute z-0 w-full overflow-hidden h-screen grid`}
+      style={{ gridTemplateColumns: `repeat(${count}, 1fr)` }}
     >
       {Array.from({ length: count }).map((_, index) => (
         <Line key={index} />
