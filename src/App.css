@@ -115,6 +115,10 @@ h1 {
   animation-fill-mode: backwards;
 }
 
+/* ==============================
+   FOOTER
+   ============================== */
+
 .footer {
   width: 100%;
   background: #000000;
@@ -123,25 +127,26 @@ h1 {
   margin: 0;
 }
 
+/* ==============================
+   FOOTER CONTAINER
+   ============================== */
+
 .footer-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-
   padding: 0 40px 45px;
 
   display: grid;
-
-  grid-template-columns:
-    2fr
-    1fr
-    1.5fr
-    1fr;
-
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
   gap: 50px;
 
   box-sizing: border-box;
 }
+
+/* ==============================
+   FOOTER BRAND
+   ============================== */
 
 .footer-brand {
   display: flex;
@@ -157,9 +162,7 @@ h1 {
 .footer-logo img {
   width: 65px;
   height: 65px;
-
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
@@ -167,9 +170,7 @@ h1 {
   margin: 0 0 12px;
 
   font-size: 22px;
-
   font-weight: 700;
-
   line-height: 1.3;
 }
 
@@ -177,52 +178,109 @@ h1 {
   margin: 0;
 
   color: #bdbdbd;
-
-  line-height: 1.7;
-
   font-size: 14px;
+  line-height: 1.7;
 
   max-width: 330px;
 }
+
+/* ==============================
+   FOOTER SECTION
+   ============================== */
+
 .footer-section {
   display: flex;
   flex-direction: column;
 }
-.footer-section h3 {
-  margin: 0 0 20px;
 
-  font-size: 18px;
+/* Judul section */
 
+.footer-section h3,
+.footer-section h4 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  color: #ffffff;
+  font-size: 17px;
   font-weight: 600;
 }
 
-.footer-section a {
-  color: #bdbdbd;
+/* ==============================
+   NAVIGATION & SOCIAL LINK
+   ============================== */
 
+.footer-section a {
+  width: fit-content;
+
+  color: #bdbdbd;
   text-decoration: none;
 
-  margin-bottom: 12px;
-
   font-size: 15px;
+
+  margin-bottom: 12px;
 
   transition: all 0.3s ease;
 }
 
 .footer-section a:hover {
   color: #ffffff;
-
   transform: translateX(5px);
 }
+
+/* ==============================
+   CONTACT
+   ============================== */
 
 .footer-section p {
   margin: 5px 0;
 
   color: #bdbdbd;
-
-  line-height: 1.7;
-
   font-size: 15px;
+  line-height: 1.7;
 }
+
+/* Icon + text sejajar */
+
+.footer-location,
+.footer-phone,
+.footer-mail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ukuran icon */
+
+.footer-location svg,
+.footer-phone svg,
+.footer-mail svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}
+
+/* ==============================
+   SOCIAL MEDIA
+   ============================== */
+
+.footer-social h4 {
+  margin: 0 0 15px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-links a {
+  margin-bottom: 0;
+}
+
+/* ==============================
+   FOOTER BOTTOM
+   ============================== */
 
 .footer-bottom {
   width: 100%;
@@ -240,10 +298,67 @@ h1 {
   margin: 0;
 
   color: #888888;
-
   font-size: 14px;
 }
 
+/* ==============================
+   RESPONSIVE - TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ==============================
+   RESPONSIVE - MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    padding: 0 25px 35px;
+
+    gap: 35px;
+  }
+
+  .footer-logo {
+    gap: 12px;
+  }
+
+  .footer-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer-brand h2 {
+    font-size: 19px;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    padding: 18px 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
