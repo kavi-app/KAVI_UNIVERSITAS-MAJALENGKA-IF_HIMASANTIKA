@@ -43,23 +43,23 @@ function App() {
 
               {/* MENU */}
               <div className="hidden items gap-8 md:flex">
-                <a href="#home" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="/#home" className="font-medium text-gray-700 transition hover:text-red-600">
                   Home
                 </a>
 
-                <a href="tentang" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="/#tentang" className="font-medium text-gray-700 transition hover:text-red-600">
                   Tentang
                 </a>
 
-                <a href="#visi-misi" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="/#visi-misi" className="font-medium text-gray-700 transition hover:text-red-600">
                   Visi-Misi
                 </a>
 
-                <a href="#fasilitas" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="/#fasilitas" className="font-medium text-gray-700 transition hover:text-red-600">
                   Fasilitas
                 </a>
 
-                <a href="#kegiatan" className="font-medium text-gray-700 transition hover:text-red-600">
+                <a href="/#kegiatan" className="font-medium text-gray-700 transition hover:text-red-600">
                   Kegiatan
                 </a>
               </div>
