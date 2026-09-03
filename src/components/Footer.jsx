@@ -20,7 +20,7 @@ function Footer() {
           <div className="footer-section">
             <h3>Navigasi Cepat</h3>
             <a href="#home">Home</a>
-            <a href="#Tentang">Tentang</a>
+            <a href="#tentang">Tentang</a>
             <a href="#visi-misi">Visi-Misi</a>
             <a href="#fasilitas">Fasilitas</a>
             <a href="#kegiatan">Kegiatan</a>
