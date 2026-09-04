@@ -11,9 +11,8 @@ import FirstSection from "./components/section/FirstSection";
 import { data } from "./utils/data";
 import SecondSection from "./components/section/SecondSection";
 import CircleInformationSection from "./components/section/CircleInformationSection";
-import PeopleInformationSection from "./components/section/PeopleInformationSection";
 import logo from "./assets/logo/UMC-1.webp";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 function App() {
   const mainRef = useRef(null);
@@ -78,7 +77,7 @@ function App() {
           <CircleInformationSection data={data.circle_information_section} />
           <ImgSection data={data.img_section} />
 
-          <PeopleInformationSection data={data.people_information_section} />
+          {/* <PeopleInformationSection data={data.people_information_section} /> */}
           <ProjectSection data={data.project_section} />
           <ClientSection data={data.client_section} />
           <Carousell />

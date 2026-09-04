@@ -1,4 +1,5 @@
 import logo from "../assets/logo/UMC-1.webp";
+import { MapPinned, Phone, Mail } from "lucide-react";
 
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
 
               <div>
                 <h2>Universitas Muhammadiyah Cirebon</h2>
-                <p>..............</p>
+                <p>Pendidikan Unggul, Berdampak Nyata bagi Peradaban. UMC berkomitmen menghadirkan pendidikan berkualitas yang memadukan keunggulan akademik, profesionalisme, dan keluhuran akhlak. </p>
               </div>
             </div>
           </div>
@@ -19,7 +20,7 @@ function Footer() {
           <div className="footer-section">
             <h3>Navigasi Cepat</h3>
             <a href="#home">Home</a>
-            <a href="#Tentang">Tentang</a>
+            <a href="#tentang">Tentang</a>
             <a href="#visi-misi">Visi-Misi</a>
             <a href="#fasilitas">Fasilitas</a>
             <a href="#kegiatan">Kegiatan</a>
@@ -27,9 +28,16 @@ function Footer() {
 
           <div className="footer-section">
             <h3>Hubungi Kami</h3>
-            <p>📍 Cirebon, Jawa Barat</p>
-            <p>📞 </p>
-            <p>✉️ </p>
+            <p className="footer-location">
+              <MapPinned size={18} />
+              <span>Cirebon, Jawa Barat</span>
+            </p>
+            <p className="footer-phone">
+              <Phone />{" "}
+            </p>
+            <p className="footer-mail">
+              <Mail />{" "}
+            </p>
           </div>
 
           <div className="footer-section">
