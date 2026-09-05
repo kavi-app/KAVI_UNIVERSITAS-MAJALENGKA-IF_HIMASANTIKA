@@ -66,7 +66,7 @@ function App() {
 
               {/* TOMBOL DAFTAR */}
               <div>
-                <a href="#daftar" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-black">
+                <a href="https://pmb.umc.ac.id" className="ml-4 rounded-lg bg-red-700 px-5! py-2! text-white transition font-bold hover:bg-black">
                   Daftar sekarang
                 </a>
               </div>

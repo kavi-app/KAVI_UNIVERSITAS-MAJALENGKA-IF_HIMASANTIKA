@@ -59,7 +59,7 @@ export default function ProjectSection({data}) {
           </div>
           <div className='w-[40%] h-full flex flex-col'>
             {data.list.map((item, index) => (
-                <div key={index} className='w-80 h-80 overflow-hidden m-auto! border border-(--line) rounded-3xl p-3!'>
+                <div key={index} className='w-100 h-100 overflow-hidden m-auto! border border-(--line) rounded-3xl p-3!'>
                   {item.img == "" ? (
                     <div className='w-full h-full rounded-2xl bg-cyan-200'>{item.name}</div>
                   ) : (
