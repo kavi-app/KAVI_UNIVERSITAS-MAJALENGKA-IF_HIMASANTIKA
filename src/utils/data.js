@@ -7,7 +7,6 @@ import img2 from "../assets/images/kelas1.jpeg";
 import img3 from "../assets/images/praktik.jpeg";
 import { Cpu, GraduationCap, Mosque, University, UsersRound } from "lucide-react";
 
-
 export const data = {
   first_section: {
     title1: "IF.",

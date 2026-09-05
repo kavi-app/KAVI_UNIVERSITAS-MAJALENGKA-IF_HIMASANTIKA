@@ -104,7 +104,7 @@ export default function CircleInformationSection({ data }) {
               <div className="flex justify-center items-center h-1/2">
                 <div className="w-[60%]">
                   <h1>{data.title}</h1>
-                  <div>{data.desc}</div>
+                  <div className="text-2xl">{data.desc}</div>
                 </div>
               </div>
               <div className="flex justify-center h-1/2">
@@ -114,7 +114,7 @@ export default function CircleInformationSection({ data }) {
                     {data.list.map((item) => {
                       if (item.title == activeCircle) {
                         return (
-                          <p key={item.title} className="from-bottom [--delay:0ms] text-justify">
+                          <p key={item.title} className="from-bottom [--delay:0ms] text-2xl text-justify">
                             {item.value}
                           </p>
                         );
