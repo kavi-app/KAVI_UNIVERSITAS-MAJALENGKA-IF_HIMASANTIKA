@@ -41,7 +41,7 @@ npm -v
    Clone project dari repository berikut:
 
    ```bash
-   git clone https://github.com/kavi-app/company-profile-lomba-1.git
+   https://github.com/kavi-app/KAVI_UNIVERSITAS-MAJALENGKA-IF_HIMASANTIKA.git
    ```
 
 2. **Masuk ke folder project**
@@ -49,7 +49,7 @@ npm -v
    Setelah repository berhasil di-clone, masuk ke folder project:
 
    ```bash
-   cd company-profile-lomba-1
+   cd KAVI_UNIVERSITAS-MAJALENGKA-IF_HIMASANTIKA
    ```
 
 3. **Install dependencies**
