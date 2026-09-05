@@ -1,7 +1,3 @@
-import fikar from "../assets/images/people/5.png";
-import septian from "../assets/images/people/1.png";
-import roni from "../assets/images/people/4.png";
-
 import img1 from "../assets/images/lab.jpg";
 import img2 from "../assets/images/kelas1.jpeg";
 import img3 from "../assets/images/praktik.jpeg";
@@ -33,11 +29,7 @@ export const data = {
   people_information_section: {
     title: "FASILITAS AKADEMIK.",
     desc: "Untuk menunjang kegiatan belajar mengajar yang berorientasi pada kompetensi rekayasa teknologi, Program Studi S1 Teknik Informatika menyediakan sarana yang memadai :",
-    list: [
-      { name: "Fikar M. Istiqlalulwathon", role: "Superman", ig: "@andkjsnd", img: fikar },
-      { name: "Septian Triana", role: "Ketua", ig: "@andkjsnd", img: septian },
-      { name: "Ade Roni Pratama", role: "Anggota", ig: "@andkjsnd", img: roni },
-    ]
+    list: []
   },
     
   img_section: [
