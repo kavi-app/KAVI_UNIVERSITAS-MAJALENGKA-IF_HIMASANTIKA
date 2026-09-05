@@ -36,11 +36,11 @@ body {
 }
 
 .work-title::before {
-  content: "Team";
+  content: "Semua";
   position: absolute;
   font-size: 2rem;
   bottom: 1rem;
-  margin-left: -5rem;
+  margin-left: -6rem;
 }
 
 .work-item::before {
@@ -133,12 +133,12 @@ h1 {
   display: grid;
 
   grid-template-columns:
+    3fr
     2fr
-    1fr
-    1.5fr
+    2fr
     1fr;
 
-  gap: 50px;
+  gap: 1rem;
 
   box-sizing: border-box;
 }
@@ -182,7 +182,7 @@ h1 {
 
   font-size: 14px;
 
-  max-width: 330px;
+  min-width: 330px;
 }
 .footer-section {
   display: flex;
